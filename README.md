@@ -1,5 +1,7 @@
 Select a video locally and convert to a gif.
 
+The conversion is done client side by using the ffmpeg wasm package and react.
+
 ## Available Scripts
 ```
 ### yarn start
