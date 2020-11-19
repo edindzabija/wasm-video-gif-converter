@@ -46,17 +46,26 @@ function App() {
   };
 
   return ready ? (
-    <div className="App">
+    <div className="app">
       {video && (
-        <video controls width="250" src={URL.createObjectURL(video)}></video>
+        <video
+          className="video-wrap"
+          controls
+          width="250"
+          src={URL.createObjectURL(video)}
+        ></video>
       )}
-      <input type="file" onChange={(e) => setVideo(e.target.files?.item(0))} />
+      <input
+        className="btn"
+        type="file"
+        onChange={(e) => setVideo(e.target.files?.item(0))}
+      />
 
       <h3>Result:</h3>
 
       <button onClick={convertToGif}>Convert</button>
 
-      {gif && <img src={gif} width="250" />}
+      {gif && <img className="video-wrap" src={gif} width="250" />}
     </div>
   ) : (
     <p>Loading...</p>
